@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[document]{ragged2e}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{natbib}
+\usepackage[legalpaper, portrait, margin=1in]{geometry}
+\graphicspath{ {./}}
+
+\title{Lab 13 - Rotational Inertia of Disk and Ring}
+\author{\textbf{Corey Russ}\\\\Phys 222-03}
+\date{Experiment Performed on 11/26/18}
+
+
+
+
+\begin{document}
+\maketitle
+
+\newpage
+\section*{\begin{center}Abstract\end{center}}
+For our experiment, our group was attempting to accurately estimate and compare the experimental and theoretical rotational inertia of a ring. Since the axis of rotation for the ring is through the center, we could not attach it to the rotary motion sensor to calculate the rotational inertia directly. Therefore, we used an additional disk to aid us in measuring the inertia. The rotational inertia for the disk alone was measured first, followed by the disk with the ring attached on top. We used a difference of these two values to estimate the rotational inertia for the ring. 
+
+
+\section*{\begin{center}Theory\end{center}}
+We are able to  calculate the rotational inertia of a ring if we have the mass, radius, and the angular acceleration of a disk and a ring. We can calculate the rotational inertia of a ring if we obtain the rotational inertia of the disk and the ring together as well as the rotational inertia of the disk alone and subtract the two values. We need to perform the experiment in this way because we cannot directly measure the rotational inertia of a ring because the axis of rotation is through the center of the ring and is not attached to anything. In order to compare the values we calculated from our experiment, we need the theoretical values and equations. The first equation is for the rotational inertia of a ring. Note that we have two radii for the ring.
+
+\begin{center}Eq 1: $\displaystyle I_R = \frac{M(R_1^2 + R_2^2)}{2}$\end{center}
+
+The next equation is for the rotational inertia of a disk.
+
+\begin{center}Eq 2: $\displaystyle I_D = \frac{MR^2}{2}$\end{center}
+
+Next, we need the equation for which we determine the experimental rotational inertia for the disk and ring. Using Newton's second law, we formed an equation for our system.
+\begin{center}Eq 3: $\sum \displaystyle F = F_G - F_T$\end{center}
+We solved equation 3 for the tension force and obtained equation 4.
+\begin{center}Eq 4: $\displaystyle T = m(g-a)$\end{center}
+Similarly, using Newton's second law for rotation we set up a seperate equation.
+\begin{center}Eq 5: $\displaystyle \tau = I\alpha$\end{center}
+We realized that we can substitute $r\alpha = a$. We then input $rT$ for $\tau$ in equation 5, and then substitute for the tension using equation 4 and obtain equation 6.
+\begin{center}Eq 6: $\displaystyle I\alpha = rm(g-r\alpha)$\end{center}
+Solving equation 6 for I we obtain equation 7.
+\begin{center}Eq 7: $\displaystyle I = \frac{rm(g-r\alpha)}{\alpha}$\end{center}
+We used equation 7 to calculate the experimental values for rotational inertia for the disk and ring.
+\begin{center}Eq 8: $\displaystyle [(\frac{I_R}{I_{D+R}-I_D})-1]\times 100$\end{center}
+Equation 8 is used to find the percentage difference between the theoretical rotational inertia value and the experimental value.
+
+\newpage
+\section*{\begin{center}Procedure\end{center}}
+
+\subsection*{\begin{center}Equipment\end{center}}
+The following items were necessary to collect our data:
+\begin{itemize}
+    \item Pasco Rotary Motion Sensor
+    \item Disk and Ring
+    \item Balance for measuring masses
+    \item Computer with matching Pasco software
+    \item 50g Mass hanger
+\end{itemize}
+Before we began collecting data, we first measured the masses of the disk and ring. The mass of the disk was 0.1205 kg and the mass of the ring was 0.4673 kg. Next, we needed the radii of the ring and disk. The inner radius for the ring was .027 meters and the outer radius was .0384 meters. The radius for the disk was .0475 meters. Furthermore, we needed the radius of the drive pulley in  order to use equation 7, since the $r$ in equation 7 is the radius of the drive pulley, not the radius of the disk. The mass of the mass hanger was given and had mass of 50 grams. We assumed the value of gravity to be a constant 9.8 $\displaystyle \frac{m}{s^2}$.
+
+\subsection*{\begin{center}Collecting Data\end{center}}
+We then began testing the equipment before collecting data. We discovered that if the string was wound around the rotary motion sensor incorrectly, it would result in a negative value for our angular velocity. We then prepared the computer software for capturing the angular velocity, and placed only the ring on the rotary motion sensor. We began recording data on the computer, and then dropped the hanging mass to unravel the string and rotate the motion sensor. We obtained many points of data for an increasing angular velocity. After collecting the data, we imported the data into Excel and created a scatter plot and created a line of best fit. This line of best fit gave us the angular acceleration of the system. We need the angular acceleration of the system in order to determine if the theoretical value for rotational inertia for our experiment is consistent. We repeated these steps once more but with the ring attached to the disk on the rotary motion sensor. We obtained a second angular acceleration value for the disk and ring system.
+
+\newpage
+\section*{\begin{center}Data, Analysis, and Discussion\end{center}}
+Putting all of our data together, we complete the following tables:
+\subsection*{}
+\begin{center}
+    Table 1:
+\end{center}
+\begin{center}
+\begin{tabular}{l|l}
+Mass of Ring ($kg\pm 1g$)          & 0.4673  \\ \hline
+Mass of Disk ($kg\pm 1g$)          & 0.1205  \\ \hline
+Mass of Hanger ($kg\pm 1g$)         & 0.05   \\ \hline
+Inner Radius of Ring ($m\pm 1mm$)   & 0.027   \\ \hline
+Outer Radius of Ring ($m\pm 1mm$)   & 0.0383  \\ \hline
+Radius of Disk ($m\pm 1mm$)         & 0.0475  \\ \hline
+Radius of Drive Pulley ($m\pm 1mm$) & 0.01435 \\ 
+\end{tabular}
+\end{center}
+\bigskip
+\begin{center}
+\begin{center}
+    Table 2: \medskip
+\end{center}
+\begin{tabular}{l|l|l}
+                & Ring + Disk & Disk   \\ \hline
+$\alpha (\frac{rad}{s^2})$  & 10.746      & 46.481 \\
+\end{tabular}
+\end{center}
+
+First, we calculated the theoretical value for the rotational inertia of the ring. We needed a value to compare our experimental value to at the end of the experiment. This value is calculated using equation 1.
+\begin{center}
+$\displaystyle 0.000515 = I_R = \frac{M(R_1^2 + R_2^2)}{2}$    
+\end{center}
+Now that we have calculated the theoretical value, we needed the experimental values of the rotational inertia of the disk alone and the disk and ring together. First we calculated the rotational inertia for the disk alone using equation 7.
+
+\begin{center}
+$\displaystyle .000141 = I_{D} = \frac{rm(g-r\alpha)}{\alpha}$
+\end{center}
+
+We then calculated the rotational inertia for the disk and ring together.
+
+\begin{center}
+$\displaystyle .000644 = I_{D+R} = \frac{rm(g-r\alpha)}{\alpha}$
+\end{center}
+
+Now that we had both experimental values for the rotational inertia for both the disk alone and the disk and ring together, we used equation 8 to calculate the percentage difference between the experimental value and the theoretical value.
+\begin{center}$\displaystyle 2.39\% \approx [(\frac{I_R}{I_{D+R}-I_D})-1]\times 100$\end{center}
+Since the experiment, our group thought of some possible sources of error. One possible source is that the radius of the drive pulley is not constant. The string adds additional thickness to the pulley as it wraps around it, creating a larger radius as a result. This would impact the calculations slightly, but not significantly. Our calculations assumed a constant pulley radius.\\\smallskip An additional source of error is the data points themselves. When we exported the data from the computer software into Excel, the data points that were selected might not have been the correct choice. For example, if some additional values were selected towards the beginning or end of the trial, the line of best fit would be skewed as a result.\\\smallskip
+Based off the percentage difference, the error is not significant. This results in the theoretical equation for the rotational inertia to hold true.
+
+\section*{\begin{center}Conclusion\end{center}}
+We conducted this experiment to verify the theoretical value for the rotational inertia of a ring. By calculating the rotational inertia for a disk alone and a disk and ring together, we were able to find the difference between the two, yielding the rotational inertia for the ring. The difference between our experimental value and the theoretical value for our ring was only $2.39\%$, which is primarily the result of small errors such as measuring errors and neglecting a changing radius.
+
+
+\end{document}
